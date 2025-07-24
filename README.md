@@ -1,3 +1,7 @@
+[Eigene Anleitung](https://github.com/Gozrid/THB2-Anleitung/blob/master/README.CUSTOM.md)
+
+
+---
 [![english](https://img.shields.io/badge/language-english-C1C1C1?style=for-the-badge)](README.md)
 [![russian](https://img.shields.io/badge/also%20available%20in-russian-blue?style=for-the-badge)](README-ru.md)
 
