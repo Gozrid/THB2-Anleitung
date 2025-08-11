@@ -1,5 +1,6 @@
 [Eigene Anleitung](https://github.com/Gozrid/THB2-Anleitung/blob/master/README.CUSTOM.md)
 
+[Video Anleitung](https://www.youtube.com/watch?v=AD2KduDTjf8)
 
 ---
 [![english](https://img.shields.io/badge/language-english-C1C1C1?style=for-the-badge)](README.md)
