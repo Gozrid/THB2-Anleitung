@@ -1,5 +1,8 @@
 ## Verdrahtung (TH05Y_V3.1)
 
+<img width="3072" height="4080" alt="PXL_20261018_111022120" src="https://github.com/user-attachments/assets/0a66439f-5abf-4ef1-9415-0f4f211f1069" />
+<img width="3072" height="4080" alt="PXL_20261018_111013568" src="https://github.com/user-attachments/assets/b287b811-9339-4fb5-a7b8-4124959f7f30" />
+
 |Adapter|Sensor|
 |---|---|
 |3V3|VBAT+; TM|
