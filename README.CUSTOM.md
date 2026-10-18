@@ -12,7 +12,8 @@
 2. Python Virtual Environment nutzen: `source ./.venv/bin/activate`
 3. Bibliotheken installieren: `pip install -r requirements.txt`
 4. RESET an GND halten um zu resetten
-5. Sofort danach `python3 rdwr_phy62x2.py -p /dev/ttyUSB0 -e -r wh ./bin/BOOT_TH05F_v21.hex` ausführen
+5. Sofort danach `python3 rdwr_phy62x2.py -p /dev/ttyUSB0 -e -r wh ./bin/BOOT_TH05F_v21.hex` ausführen (ohne TM angeschlossen)
+   Oder `python3 rdwr_phy62x2.py -p /dev/cu.usbserial-11320 -t -e -r wh ./bin/BOOT_TH05F_v21.hex` (mit TM angeschlossen)
 
 Flashvorgang sollte laufen
 
