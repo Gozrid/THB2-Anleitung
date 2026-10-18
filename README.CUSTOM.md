@@ -6,7 +6,6 @@
 
 Flashvorgang sollte laufen
 
----
 
 ## Prüfen auf welchem Port der Adapter läuft
 `ls /dev/cu.*`
