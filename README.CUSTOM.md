@@ -5,3 +5,8 @@
 5. Sofort danach `python3 rdwr_phy62x2.py -p /dev/ttyUSB0 -e -r wh ./bin/BOOT_TH05F_v21.hex` ausführen
 
 Flashvorgang sollte laufen
+
+---
+
+## Prüfen auf welchem Port der Adapter läuft
+`ls /dev/cu.*`
