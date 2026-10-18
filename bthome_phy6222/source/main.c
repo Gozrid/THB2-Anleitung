@@ -331,13 +331,13 @@ const ioinit_cfg_t ioInit[] = {
 		{ GPIO_P18, GPIO_PULL_DOWN },
 		{ GPIO_P20, GPIO_PULL_DOWN },
 		{ GPIO_P23, GPIO_PULL_DOWN },
-		{ GPIO_P24, GPIO_PULL_UP   },	// Key
+		{ GPIO_P24, GPIO_PULL_UP_S   },	// Key
 		{ GPIO_P31, GPIO_PULL_DOWN },
 		{ GPIO_P32, GPIO_PULL_DOWN },
 		{ GPIO_P33, GPIO_PULL_DOWN },
 		{ GPIO_P34, GPIO_PULL_DOWN }
 
-#elif DEVICE == DEVICE_HDP16
+#elif (DEVICE == DEVICE_HDP16)
 
 		{ GPIO_P00 , GPIO_PULL_DOWN }, // sc7a20
 		{ GPIO_P01 , GPIO_PULL_DOWN }, // sc7a20
@@ -347,7 +347,32 @@ const ioinit_cfg_t ioInit[] = {
 		{ GPIO_P09 , GPIO_PULL_UP }, // TX
 		{ GPIO_P10 , GPIO_PULL_UP }, // RX
 		{ GPIO_P11 , GPIO_PULL_UP }, // VBat
-		{ GPIO_P14 , GPIO_PULL_UP }, // Key
+		{ GPIO_P14 , GPIO_PULL_DOWN },
+		{ GPIO_P15 , GPIO_PULL_DOWN }, // Key HDP16
+		{ GPIO_P16 , GPIO_PULL_DOWN },
+		{ GPIO_P17 , GPIO_PULL_DOWN },
+		{ GPIO_P18 , GPIO_PULL_DOWN },
+		{ GPIO_P20 , GPIO_PULL_DOWN },
+		{ GPIO_P23 , GPIO_PULL_DOWN },
+		{ GPIO_P24 , GPIO_PULL_DOWN },
+		{ GPIO_P25 , GPIO_PULL_DOWN },
+		{ GPIO_P26 , GPIO_PULL_DOWN },
+		{ GPIO_P31 , GPIO_PULL_DOWN },
+		{ GPIO_P32 , GPIO_PULL_DOWN },
+		{ GPIO_P33 , GPIO_PULL_DOWN },
+		{ GPIO_P34 , GPIO_PULL_DOWN }   // Buzzer
+
+#elif (DEVICE == DEVICE_TN6ATAG3)
+
+		{ GPIO_P00 , GPIO_PULL_DOWN }, // sc7a20
+		{ GPIO_P01 , GPIO_PULL_DOWN }, // sc7a20
+		{ GPIO_P02 , GPIO_PULL_DOWN }, // sc7a20
+		{ GPIO_P03 , GPIO_PULL_DOWN }, // sc7a20
+		{ GPIO_P07 , GPIO_PULL_DOWN },
+		{ GPIO_P09 , GPIO_PULL_UP }, // TX
+		{ GPIO_P10 , GPIO_PULL_UP }, // RX
+		{ GPIO_P11 , GPIO_PULL_UP }, // VBat
+		{ GPIO_P14 , GPIO_PULL_UP }, // Key TN_6ATAG3
 		{ GPIO_P15 , GPIO_PULL_DOWN },
 		{ GPIO_P16 , GPIO_PULL_DOWN },
 		{ GPIO_P17 , GPIO_PULL_DOWN },
@@ -497,7 +522,11 @@ int main(void) {
 	wrk.boot_flg = (uint8_t)read_reg(OTA_MODE_SELECT_REG);
 #if defined(OTA_TYPE) && OTA_TYPE == OTA_TYPE_BOOT
 #if (DEV_SERVICES & (SERVICE_KEY | SERVICE_BUTTON))
+#if	KEY_PRESSED == 0
+	hal_gpio_pull_set(GPIO_KEY, GPIO_PULL_UP_S);
+#endif
 	hal_gpio_pin_init(GPIO_KEY, GPIO_INPUT);
+
 	if (hal_gpio_read(GPIO_KEY) == KEY_PRESSED
     	|| wrk.boot_flg == BOOT_FLG_OTA
     	|| wrk.boot_flg == BOOT_FLG_FW0) {

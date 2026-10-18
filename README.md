@@ -54,7 +54,7 @@ The [Boot](#fw-boot-and-ota) firmware has minimal functions. `FW Boot` is only u
 
 | Device | Boot file | OTA file | Printed circuit board labelling |
 |:---:|:---:|:---:|:---:|
-| [BTH01](https://pvvx.github.io/BTH01) | BOOT_BTH01_v20.hex | BTH01_v20.bin | no |
+| [BTH01](https://pvvx.github.io/BTH01) | BOOT_BTH01_v20.hex | BTH01_v20.bin | BTH01Y_V1.2, BTH01Y_V3.1, BTH11Y_V1.0 |
 | [THB1](https://pvvx.github.io/THB1) | BOOT_THB1_v20.hex | THB1_v20.bin | no |
 | [THB2](https://pvvx.github.io/THB2) | BOOT_THB2_v20.hex | THB2_v20.bin | no |
 | [THB3](https://pvvx.github.io/THB3) | BOOT_THB2_v20.hex | THB2_v20.bin | no |
@@ -119,7 +119,7 @@ The sensors are detected automatically, but have different ports depending on th
 | 1.8 | <ul><li>Added display of temperature in degrees Fahrenheit</li></ul> |
 | 1.9 | <ul><li>Fixed the bug of restoring the changed device name after power reset</li></ul> |
 | 2.0 | <ul><li>Added processing of the CHT832x sensor (Support board TH05Y_v3.1)</li><li>Fixing a bug in BOOT OTA bin files</li><li>Added sleep function when battery is completely discharged</li><li>Added experimental firmware for [iSearching](https://pvvx.github.io/iSearching) key fobs on ST17H66B chip (support "FindMy")</li><li>Fixed display errors for TH05D</li><li>Added [TH04](https://pvvx.github.io/TH04)</li></ul> |
-| 2.1 | <ul><li>Changed battery voltage averaging, switching to deep sleep mode for 60 minutes when voltage drops below 1.9 V and turning off all loads. </li><li>Added button functions: "Automatic display sleep", switching display of degrees Celsius or Fahrenheit.</li></ul> |
+| 2.1 | <ul><li>Changed battery voltage averaging, switching to deep sleep mode for 60 minutes when voltage drops below 1.9 V and turning off all loads. </li><li>Added button functions: "Automatic display sleep", switching display of degrees Celsius or Fahrenheit</li><li>Fixed launch when powerUp in APP (TH04)</li></ul> |
 
 
 ## Firmware
